@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login SuccessFull</title>
+</head>
+<body>
+    {% block content %}
+    <h4> Hey {{ name }}, You're SuccessFully Logged In </h4>
+    <!-- <a href="logout">logout</a>&nbsp&nbsp -->
+    <input type="button" onclick="location.href='logout';" value="Logout" />&nbsp&nbsp
+    <!-- <a href="registered_users_list">Show Registered Users List</a><br><br> -->
+    <input type="button" onclick="location.href='registered_users_list';" value="Registered Users List" /><br><br>
+    {{ message }}
+    {% endblock %}
+</body>
+</html>

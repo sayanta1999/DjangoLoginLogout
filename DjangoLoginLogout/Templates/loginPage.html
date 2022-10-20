@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    {% block content %}
+    <form action="checkLoginCredentials" method="post">
+        {% csrf_token %}
+        <h2> Login Page </h2>
+        <input type="email" name="email" placeholder="Enter Your EMail" required><br><br>
+        <input type="password" name="password" placeholder="Enter Your Password" required><br><br>
+        <input type="submit" name="Login">&nbsp&nbsp&nbsp&nbsp
+        <input type="reset">&nbsp&nbsp&nbsp&nbsp
+        <input type="button" onclick="location.href='registration';" value="Register User" /><br><br>
+        <!-- <a href="registration">New User?</a><br><br> -->
+        {{ message }}
+    </form>
+    {% endblock %}
+</body>
+</html>

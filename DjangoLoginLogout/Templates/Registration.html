@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+    <h1> Registration Page</h1>
+    <form action="RegisterUser" method="post">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="Enter Your First Name" required ><br><br>
+        <input type="text" name="last_name" placeholder="Enter Your Last Name"><br><br>
+        <input type="email" name="email" placeholder="Enter Your EMail" required ><br><br>
+        <input type="tel" name="ph_no" placeholder="Enter Your Phone Number" pattern="[0-9]{10}" required ><br><br>
+        <input type="password" name="password" placeholder="Enter Your Password" required ><br><br>
+        <input type="password" name="confirm_password" placeholder="Confirm Your Password" required ><br><br>
+        <input type="Submit">&nbsp&nbsp&nbsp<input type="Reset"><br><br>
+        {{ message }}
+    </form>
+</body>
+</html>
